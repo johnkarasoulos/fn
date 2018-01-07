@@ -174,6 +174,7 @@ func FromRequest(appName, path string, req *http.Request, params Params) CallOpt
 			CreatedAt:   strfmt.DateTime(time.Now()),
 			URL:         req.URL.String(), // TODO we should probably strip host/port
 			Method:      req.Method,
+			AppID:       app.ID,
 		}
 
 		c.req = req
